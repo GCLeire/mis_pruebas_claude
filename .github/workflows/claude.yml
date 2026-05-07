@@ -1,5 +1,9 @@
 name: Claude Code Review
-on: [pull_request]
+on:
+  push:
+    branches: [ master, probando_claude_dia1 ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   claude_review:
