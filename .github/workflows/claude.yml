@@ -1,7 +1,9 @@
 name: Claude Code Review
 on:
-  push:
-    branches: [ master, probando_claude_dia1 ]
+  # la primera vez que hicimos el commit pusimos el push para que lo reconociese, ahora
+  # ya no hace falta 
+  # push:
+  # branches: [ master, probando_claude_dia1 ]
   pull_request:
     branches: [ master ]
   
