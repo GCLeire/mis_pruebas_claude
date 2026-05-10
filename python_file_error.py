@@ -39,3 +39,9 @@ def sumar(a, b):
 procesar_datos("hola") 
 sumar(5, "10")   
 borrar_archivo("../../etc/passwd") 
+
+for i in range(10)
+    print(i)
+
+if x = 5:
+    print("hola")
