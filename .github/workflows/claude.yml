@@ -1,0 +1,31 @@
+name: Claude Code Review
+on:
+  # la primera vez que hicimos el commit pusimos el push para que lo reconociese, ahora
+  # ya no hace falta 
+  # push:
+  # branches: [ master, probando_claude_dia1 ]
+  pull_request:
+    branches: [ master ]
+  
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  claude_review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Code Review (OpenRouter + modelo gratuito)
+        uses: codex-io/code-review-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          api_key: ${{ secrets.OPENROUTER_API_KEY }}
+          api_base_url: "https://openrouter.ai/api/v1"
+          # Modelo gratuito o casi gratuito
+          model: "meta-llama/llama-3.1-8b-instruct"
