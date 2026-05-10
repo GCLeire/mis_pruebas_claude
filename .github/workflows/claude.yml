@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Code Review (OpenRouter + modelo gratuito)
-        uses: mckaywrigley/claude-review-action@v2
+        uses: codex-io/code-review-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           api_key: ${{ secrets.OPENROUTER_API_KEY }}
