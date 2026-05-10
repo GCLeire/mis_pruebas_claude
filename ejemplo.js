@@ -7,3 +7,5 @@ function sumar(a, b) {
 
 const resultado = sumar(5, "10"); // Error: Estamos sumando un número y un texto
 console.log(resultado);
+
+//probar añadir comentario
